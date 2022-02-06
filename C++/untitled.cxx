@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+
+int main(){
+	string str1 = 0;
+	int sum_num = 0, num;
+	
+	while(getline(cin, str1)){
+		for(int i=0; i<(int)str1.size(); i++){
+			if(isdigit(str1[i])
+				continue;
+			else
+				str1[i]=' ';
+		}
+		stringstream abc(str1);
+		while(abc >> num)
+			sum_num += num;
+	}
+	cout<<"Sum of all positive integes: "<<sum_num<<endl;
+	return 0;
+}

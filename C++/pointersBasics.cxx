@@ -15,7 +15,7 @@ int main(){
     cin>>a;
     ptr = &a;
     this will produce error as the the pointer variable 'ptr' 
-    will only store the address of int variable. But we are assigning 
+    will only store the address of int variable. But we are assigning the address of
     a float variable to ptr. hence the error: cannot convert ‘float*’ to ‘int*’ in assignment 
     */
     //int j =  44;

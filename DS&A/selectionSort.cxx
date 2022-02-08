@@ -31,11 +31,11 @@ int main(){
     cout<<"Enter the number of elements you want to enter(max. 50): ";
     cin>>usedLength;
     cout<<"\nEnter array elements...";
-    for(int i=0; i<usedLength; i++)
+    for(int i=0; i<usedLength; i++)         //Input
         cin>>arr[i]; 
-    selectionSort(arr, usedLength);
+    selectionSort(arr, usedLength);         //function call for sorting
     cout<<"\nThe Sorted array is ...\n";
-    for(int i=0;i<usedLength;i++)
+    for(int i=0;i<usedLength;i++)           //Printing output
         cout<<arr[i]<<" ";
 
     return 0;
@@ -51,11 +51,12 @@ void selectionSort(int arr[], int size){
                 position = j;
             }
         }
+        //swapping
         tmp = arr[i];
         arr[i] = arr[position];
         arr[position] = tmp;
         cout<<"\nArray after iteration - "<<i+1<<"\n";
-        for(int k = 0; k<size;k++)
+        for(int k = 0; k<size;k++)              //for checking progress after each swap of elements
             cout<<arr[k]<<" ";
     }
 }

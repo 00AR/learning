@@ -24,3 +24,28 @@ int main(){
     //error: it will not work 
     return 0;
 }
+
+/*
+After compiling a program, C++ compiler creates four logically distinct regions
+of memory that are used for four distinct specific functions.
+_______________________________________
+|               Stack               3 |
+|_____________________________________|           
+|               Heap                4 |  
+|_____________________________________|
+|   Global          |    Program      |
+|   variables     2 |    Code       1 |
+|___________________|_________________|
+
+1. Every instruction and every function of the program starts at a particular address.
+2. Global variables remain in the program as long as program continues
+3. Stack is used for holding the return addresses at function calls, arguments passed to the 
+   functions and local variables for functions. The stack also stores the current state of the
+   CPU.
+4. Heap memory area is a region of free memory from which chunks of memory are allocated via
+   via dynamic memory allocation functions.
+
+ '* operator' is called the dereferencing operator
+ '& operator' is called Address operator
+ 
+*/

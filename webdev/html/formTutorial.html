@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h2>This is Form Tutorial</h2>
+    <form action="backendfile.php">
+        <div>
+            Name: <input type="text" name="userName">
+        </div>
+        <div>
+            Role: <input type="text" name="userRole">
+        </div>
+        <div>
+            Email: <input type="email" name="userEmail">
+        </div>
+        <div>
+            DOB: <input type="date" name="userDOB">
+        </div>
+        <div>
+            days: <input type="number" name="userNumber">
+        </div>
+        <div>
+            <label for="extra">Need extra input types: </label>
+            <!-- using label it will be possible to check the box 
+                by clicking on the text 'Need extra input types'-->
+            <input type="checkbox" name="userExtra" id="extra">
+        </div>
+        <div>
+            <label for="gender">Gender: </label><br>
+            Male : <input type="radio" name="userGender" id="gender">
+            Female : <input type="radio" name="userGender">
+            <!-- names of the radio buttons is same therefore only one can be selected  -->
+        </div>
+        Write about yourself:
+        <br> <!-- br is not recommended-->
+        <textarea name="userDetails" cols="30" rows="10" style="resize:none"></textarea>
+        <div>
+            <label for="course"></label>
+            <select name="userCourse" id="course">
+                <option value="webdev" selected>Web dev</option>
+                <option value="devop">DevOps</option>
+                <option value="native">Native</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Clear Fields">
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    <style>
+        p{
+            color:blue;
+            background-color: black;
+        }
+        </style>
+        <!-- <link> comes after internal css, so it is given preference over internal css-->
+    <link rel="stylesheet" href="cssbasics.css">
+</head>
+<body>
+    <h3>This is CSS Tutorial</h3>
+    <p style="color:rosybrown; background-color:aquamarine;">This tutorial is about inline, internal and external CSS</p>
+    <p style="color:rosybrown; background-color:aquamarine;">Inline CSS is given preference over internal CSS</p>
+    <p>here you can see internal CSS</p>
+    <p>here you see external CSS. Above sentence will
+        also have the same color and background-color
+        because external css file is added after internal 
+        css. 
+    </p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        p {
+            color: goldenrod;
+        }
+
+        #redElement {
+            color: red;
+        }
+
+        .blueElement {
+            color: blue;
+        }
+
+        .greenElement {
+            color: green;
+        }
+        /* <!-- grouping selector --> */
+        footer, span{
+            color:darkgoldenrod;
+            background-color: khaki;
+        }
+        
+        </style>
+    <!-- # for id and . for classes -->
+</head>
+
+<body>
+    <p>Paragraph to demonstrate CSS Selectors</p>
+    <p id="redElement">Another paragraph to demonstrate use of id in CSS</p>
+    <p class="redElement">Is the class in the &lt;p&gt; redElement or not: NO</p>
+    <p class="blueElement">blueElement is the class in the &lt;p&gt; tag</p>
+    <p id="redElement" class="blueElement">What if redElement is the id and blueElement is the class in the &lt;p&gt;
+        tag</p>
+    <p class="blueElement greenElement">
+        blueElement and greenElement are the classes in the &lt;p&gt; tag.
+        greenElement gets the precedence.
+    </p>
+    <span>Span to demonstrate grouping Selectors</span>
+    <footer>Footer for this page</footer>
+</body>
+
+</html>

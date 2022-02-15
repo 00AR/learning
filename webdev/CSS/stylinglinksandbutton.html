@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Links and Buttons</title>
+    <style>
+        .container{
+            border: 2px solid lightblue;
+            background-color: rgb(223, 245, 201);
+            padding: 34px;
+            margin: 34px auto;
+            width:666px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        /* pseudo selector to define special state */
+        a:hover{
+            color: rgb(5, 0, 0);
+            background-color: rgb(221, 166, 38);
+        }
+        a:visited{
+            background-color: blueviolet;
+        }
+        a:active{
+            background-color: azure;
+        }
+        .btn{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            background-color: crimson;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 14px;
+        }
+        .btn:hover{
+            color: darkgoldenrod;
+            background-color: rgb(223, 245, 201);
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>Reach us</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus libero reprehenderit magni ut ratione iste accusamus, similique obcaecati et impedit repudiandae quam consequatur omnis fugit, aspernatur animi quas voluptatum perferendis. Nam fuga adipisci eaque?</p>
+        <a href="https://google.com" class="btn">Read more</a>
+        <button class="btn">Contact us</button>
+    </div>
+</body>
+</html>

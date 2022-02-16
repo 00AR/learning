@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model, Margin and Padding</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: burlywood;
+            border: 3px solid rgb(163, 95, 226);
+            /* padding-top:10px;
+            padding-bottom: 5px;
+            padding: 23px 43px 54px 12px; top right bottom left
+            similar way for margin also
+             */
+            padding: 19px;
+            margin: 10px;
+            border-radius: 14px;
+            width: 430px;
+            /* 
+            when we are increasing padding the width is also increasing
+            so we use box-sizing to stop it.
+            border-sizing property defines how the width and height of an
+            element are calculated: should they include padding, border or not
+            (reference: w3schools.com)
+            */
+            /* box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Heading 1</h3>
+        <p id="first">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis fuga, rem quae impedit maiores ea incidunt est corporis sapiente? Beatae reprehenderit unde perferendis dignissimos natus autem, dicta eius inventore?
+        </p>
+    </div>
+    <div class="container">
+        <h3>Heading 2</h3>
+        <p id="second">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis fuga, rem quae impedit maiores ea incidunt est corporis sapiente? Beatae reprehenderit unde perferendis dignissimos natus autem, dicta eius inventore?
+        </p>
+    </div>
+    <div class="container">
+        <h3>Heading 3</h3>
+        <p id="third">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis fuga, rem quae impedit maiores ea incidunt est corporis sapiente? Beatae reprehenderit unde perferendis dignissimos natus autem, dicta eius inventore?
+        </p>
+    </div>
+</body>
+</html>

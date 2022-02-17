@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+    <style>
+        .box{
+            border: 2px solid brown;
+            /* float:left; */
+            display: inline-block;
+            height: 150px;
+            width:150px;
+            margin:2px;
+        }
+        /* Types of positions: static(default), relative, absolute, fixed and sticky */
+         #box3{ 
+            /* box shifts relative to its position set by user */
+            /* position:  relative; */
+            /* positioning of an element as absolute
+            renders the element relative the first not-static parent element */
+            /* position:  absolute;
+            top: 23px;
+            left: 34px; */
+            /* position of element relative to the browser window. fixed even in case of scrolling down */
+            /* position: fixed;
+            right: 4px;
+            bottom: 2px; */
+            /* element sticks to the screen in case of scrolling */
+            position: sticky;
+            top: 3px;
+        } 
+        /* #box4{
+            position: absolute;
+            left: 32px;
+        } */
+        .container{
+            border: 2px solid rgb(155, 146, 68);
+            height:1200px;/* just to demonstrate the scrolling examples*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>    
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>

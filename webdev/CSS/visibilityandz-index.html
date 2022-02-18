@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Z-index</title>
+    <style>
+        .box{
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+        #box1{
+            position:relative;
+            top: 100px;
+            background-color: green;
+            z-index: 37;
+        }
+        #box2{
+            position: relative;
+            top: 50px;
+            /* hides the box but the space is reserved */
+            /* visibility: hidden; */
+            /* hides the box and fills the empty space with the next box */
+            /* display: none; */
+            background-color: red;
+            /* z-index will work only for the positions: relative, absolute, fixed and sticky */
+            z-index: -1;
+            /* For a positioned box, the 'z-index' property specifies the stack level of the box in the current stacking context and whether the box establishes a local stacking context. */
+        }
+        #box3{
+            background-color: blue;
+        }
+        #box4{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

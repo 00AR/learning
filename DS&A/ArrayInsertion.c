@@ -33,3 +33,11 @@ int main(){
     size += 1;
     display(arr,size);
 }
+
+/*
+Time Complexity: 
+Best Case: O(1)
+Worst Case: O(n)
+
+Space Complexity: O(1)
+*/

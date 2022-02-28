@@ -49,3 +49,11 @@ void bubbleSort(int arr[], int size){
             cout<<arr[k]<<" ";
     }
 }
+
+/*
+Time Complexity: 
+Best Case: O(n)
+Worst Case: O(n^2)
+
+Space Complexity: O(1)
+*/

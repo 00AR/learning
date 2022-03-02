@@ -56,3 +56,10 @@ void insertionSort(int arr[], int size){
         cout<<endl;
     }
 }
+/*
+Time Complexity: 
+Best Case: O(n)
+Worst Case: O(n^2)
+
+Space Complexity: O(1)
+*/

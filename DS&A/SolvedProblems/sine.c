@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <time.h>
+//#include <time.h>
 
 int main(){
 	
@@ -7,10 +7,10 @@ int main(){
 	const float pi = 3.1415926;
 	double x, result,term;
 	
-	time_t now;
-	time(&now);
+	//time_t now;
+	//time(&now);
 	
-	printf("%s", ctime(&now));	
+	//printf("%s", ctime(&now));	
 	
 	printf("Enter the value of x in degrees: ");
 	scanf("%lf", &x);
@@ -19,9 +19,9 @@ int main(){
 	//printf("%f", x);
 	printf("Enter the value of n: ");
 	scanf("%d", &n);
-	
+	//result is initialized with the first term of the series.
 	result=x;
-	term=x;
+	term=x;		//variable to calculate the successive term
 	
 	for(int i=1;i<n;i++){
         term=(term*(-1)*x*x)/(2*i*(2*i+1));

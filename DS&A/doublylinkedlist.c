@@ -17,6 +17,23 @@ void traversal(struct dll* head){
     }while(p!=NULL);
 }
 
+ //TODO: insertion and deletion needs to be added
+struct dll* insertAtHead(struct dll* head){
+    return head;
+}
+
+struct dll* insertAtLast(struct dll* head){
+    return head;
+}
+
+struct dll* deleteAtFirst(struct dll* head){
+    return head;
+}
+
+struct dll* deleteAtLast(struct dll* head){
+    return head;
+}
+
 int main(){
     struct dll* head;
     struct dll* second;

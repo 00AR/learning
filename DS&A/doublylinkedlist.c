@@ -18,8 +18,14 @@ void traversal(struct dll* head){
 }
 
  //TODO: insertion and deletion needs to be added
-struct dll* insertAtHead(struct dll* head){
-    return head;
+struct dll* insertAtHead(struct dll* head, int val){
+    struct dll* new = (struct dll*)malloc(sizeof(struct dll));
+    new->data = val;
+    new->prev = NULL;
+    new->next = head;
+    head->prev = new;
+    
+    return new;
 }
 
 struct dll* insertAtLast(struct dll* head){
@@ -27,7 +33,12 @@ struct dll* insertAtLast(struct dll* head){
 }
 
 struct dll* deleteAtFirst(struct dll* head){
-    return head;
+    //prev:data:next
+    struct dll* p=head->next;
+    p->prev=NULL;
+    head->next=NULL;
+    free(head);
+    return p;
 }
 
 struct dll* deleteAtLast(struct dll* head){
@@ -64,7 +75,12 @@ int main(){
     fifth->next = NULL;
 
     traversal(head);
+    head = insertAtHead(head, 99);
     printf("\n");
+    traversal(head);
+    head = deleteAtFirst(head);
+    printf("\n");
+    traversal(head);
 
     return 0;
 }

@@ -17,7 +17,6 @@ void traversal(struct dll* head){
     }while(p!=NULL);
 }
 
- //TODO: insertion and deletion needs to be added
 struct dll* insertAtHead(struct dll* head, int val){
     struct dll* new = (struct dll*)malloc(sizeof(struct dll));
     new->data = val;

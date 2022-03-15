@@ -27,7 +27,19 @@ struct dll* insertAtHead(struct dll* head, int val){
     return new;
 }
 
-struct dll* insertAtLast(struct dll* head){
+struct dll* insertAtLast(struct dll* head, int val){
+    struct dll* p = head;
+    struct dll* new = (struct dll*)malloc(sizeof(struct dll));
+    new->data = val;
+
+    while(p->next!=NULL){
+        p = p->next;
+    }
+
+    p->next = new;
+    new->prev = p;
+    new->next = NULL;
+
     return head;
 }
 
@@ -78,6 +90,9 @@ int main(){
     printf("\n");
     traversal(head);
     head = deleteAtFirst(head);
+    printf("\n");
+    traversal(head);
+    head = insertAtLast(head, 10);
     printf("\n");
     traversal(head);
 

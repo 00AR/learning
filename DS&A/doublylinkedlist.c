@@ -53,6 +53,16 @@ struct dll* deleteAtFirst(struct dll* head){
 }
 
 struct dll* deleteAtLast(struct dll* head){
+    struct dll* pre=head;
+    struct dll* del=head->next;
+
+    while(del->next != NULL){
+        del = del->next;
+        pre = pre->next;
+    }
+    pre->next = NULL;
+    free(del);
+
     return head;
 }
 
@@ -85,14 +95,17 @@ int main(){
     fifth->prev = fourth;
     fifth->next = NULL;
 
+    // traversal(head);
+    // head = insertAtHead(head, 99);
+    // printf("\n");
+    // traversal(head);
+    // head = deleteAtFirst(head);
+    // printf("\n");
+    // traversal(head);
+    // head = insertAtLast(head, 10);
+    // printf("\n");
     traversal(head);
-    head = insertAtHead(head, 99);
-    printf("\n");
-    traversal(head);
-    head = deleteAtFirst(head);
-    printf("\n");
-    traversal(head);
-    head = insertAtLast(head, 10);
+    head = deleteAtLast(head);
     printf("\n");
     traversal(head);
 

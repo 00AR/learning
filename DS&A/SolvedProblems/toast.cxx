@@ -23,25 +23,21 @@
 #include<iostream>
 using namespace std;
 
-float minofthree(float,float,float);
+int minofthree(int,int,int);
 
 int main()
 {
 	//int n, k, l,c,d,p,nl,np;
 	int n=5, k=100, l=10,c=1,d=19,p=90,nl=4,np=3;
-	float x, y, z;
-	//cin>>n>>k>>l>>c>>d>>p>>nl>>np;
-	cout<<"Total Number of toast that can be made \n";
-	cout<<"from drinks quantity "<<(float)(k*l/nl)<<endl;
-	cout<<"from lime slices "<<(float)(c*d)<<endl;
-	cout<<"from salt "<<(float)(p/np);
-	
-	//cout<<(int)(minofthree(x,y,z)/3);
-	
+	int x, y, z;
+	x=k*l/nl;
+	y=c*d;
+	z=p/np;
+	cout<<minofthree(x,y,z)/n;
 	return 0;
 }
 
-float minofthree(float n1, float n2, float n3){
+int minofthree(int n1, int n2, int n3){
 	if((n1 <= n2) && (n1 <= n3))
         return n1;
     else if ((n2 <= n1) && (n2 <= n3))

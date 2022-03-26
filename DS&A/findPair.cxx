@@ -7,6 +7,15 @@ int main(){
 	int num=70;
 	//cin>>n;
 	int a[n]={10,21,42,63,74,75,86,87,98,99};
+	
+	int i = 0;
+	for (i=0; i<n; i++){
+		if (a[i] > num) {
+			break;
+		}
+	}
+	cout<<a[i]<<" "<<a[i+1];
+	
 	//for(int i=0; i<n; i++)
 		//cin>>a[i];
 	while(1){

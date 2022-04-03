@@ -1,13 +1,17 @@
-// { Driver Code Starts
-//Initial function template for C++
-
 #include<bits/stdc++.h>
 using namespace std;
 
- // } Driver Code Ends
-//User function template for C++
 class Solution{
     public:
+    
+    /* my comments
+    // using merge sort the problem can be solved in O(nlog(n)) time.
+    // can be improved using heap. 
+    //Improved Time complexity is O(nlog(k))
+    // for min element Max heap is used
+    // capacity of max heap is k.
+    */
+    
     // arr : given array
     // l : starting index of the array i.e 0
     // r : ending index of the array i.e size-1
@@ -17,7 +21,7 @@ class Solution{
 
         for(int i=0; i<=abs(r-l); i++){
             maxh.push(arr[i]);
-            if(maxh.size() >k){
+            if(maxh.size() > k){
                 maxh.pop();
             }
         }

@@ -19,8 +19,8 @@ void push(struct stack* ptr, int val){
     
     if(isFull(ptr)){
         printf("Stack Overflow!!! Cannot push %d to the stack", val);
-        return -1; //not utilized in the program
-    }
+        return;
+        }
     else{
         ptr->top++;
         ptr->arr[ptr->top]=val;

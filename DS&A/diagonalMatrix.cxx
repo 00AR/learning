@@ -37,6 +37,15 @@ void DiagonalMatrix::print(){
     }
 }
 
+DiagonalMatrix DiagonalMatrix::add(DiagonalMatrix B){
+    if(n!=B.n)
+        return B;
+    DiagonalMatrix C(n);
+    for(int i=0; i<n; i++)
+        C.a[i]= a[i] + B.a[i];
+    return C;
+}
+
 int main(){
     int n;
     cout<<"Enter the order of the matrix ";
@@ -44,6 +53,9 @@ int main(){
     DiagonalMatrix A(n), B(n);
     A.read();
     A.print();
-
+    B.read();
+    B.print();
+    DiagonalMatrix C = A.add(B);
+    C.print();
     return 0;
 }

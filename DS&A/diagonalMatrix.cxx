@@ -46,6 +46,32 @@ DiagonalMatrix DiagonalMatrix::add(DiagonalMatrix B){
     return C;
 }
 
+DiagonalMatrix DiagonalMatrix::mul(DiagonalMatrix B){
+    if(n != B.n)
+        return B;
+    DiagonalMatrix C(n);
+    for(int i=0; i<n; i++)
+        C.a[i] = a[i] * B.a[i];
+    return C;
+}
+
+float DiagonalMatrix::det(){
+    float d=1;
+    for(int i=0; i<n; i++){
+        d += a[i];
+    }
+    return d;
+}
+
+DiagonalMatrix DiagonalMatrix::inverse(){
+    if(det() == 0)
+        return *this;
+    DiagonalMatrix B(n);
+    for(int i=0; i<n; i++)
+        B.a[i] = 1.0 / a[i];
+    return B;
+}
+
 int main(){
     int n;
     cout<<"Enter the order of the matrix ";
@@ -57,5 +83,11 @@ int main(){
     B.print();
     DiagonalMatrix C = A.add(B);
     C.print();
+    C = A.mul(B);
+    C.print();
+    cout<<"\ndet(A) = "<<A.det();
+    C = A.inverse();
+    C.print();
+    
     return 0;
 }

@@ -1,0 +1,38 @@
+why strings are immutable in java?
+
+immutable because of the security, synchronization and concurrency, caching and class loading.
+String objects are cached in the String pool. Cached literals are accessed by multiple clients.
+So there is always a risk.
+for performance reason String objects are cached.
+
+immutable object: An object whose state cannot be modified after it is created.
+
+Other Reason:
+String pool are possible because of immutability
+Same string referred by more than one string var in the pool.
+If not immutable, hacker can cause security issue in the app by changing the reference value.
+String is safe for multithreading because of immu..Different threads can access a single "String instance". It removes synchronization for thread safety because we make strings thread-safe implicitly.
+Immutability gives the security of loading the correct class by Classloader. If loaded java.sql.Connection class, but hacker changed to myhacked.Connection, security issue.
+
+String str = "knowledge";
+//assign a new reference to 
+//the same string
+String s = str;
+
+str = str.concat(" base");
+// this works because strings are immutable ,
+// its reference variable is not.
+// three String objects "Knowledge", "Knowledge base"
+// and " base".
+
+//////////////////////////////////
+     /-> ||    "Knowledge"	//
+str-/	 ||	"Knowledge base"//
+         ||/////////////////////// 
+         ||   String pool   //////
+//////////////////////////////////
+		
+JVM sets aside a special area of memory called "String constant pool"
+When compiler sees a String literal, it looks for the String in the pool. If match is found, the reference to the new literal is directed to the existing String and no new String object is created.
+String object in the pool is likely to have many references, any modification would be bad, so String objects are immutable.
+The String class is marked final so that nobody can override the behavior of its method. 
